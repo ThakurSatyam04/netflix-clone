@@ -7,8 +7,11 @@ const Hero = ({ moviePosters }) => {
   const [showPlayer, setShowPlayer] = useState(false);
 
   useEffect(() => {
+
+    // to get the random movie from the list of all the movies coming
     const mov = moviePosters[Math.floor(Math.random() * moviePosters.length)];
 
+    //Fetch movie according to random selected movie's id
     fetch(
       `https://api.themoviedb.org/3/movie/${mov.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&append_to_response=videos`
     )
