@@ -9,17 +9,19 @@ import { signOut } from "next-auth/react";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="container flex justify-between">
+    <nav className="bg-black bg-opacity-50">
+      <div className="container flex justify-between ">
         <div className="flex items-center space-x-2 md:space-x-10">
           <Link href="/">
             <Logo style="h-auto w-[100px]" />
           </Link>
 
           <ul className="hidden space-x-4 md:flex">
-            <li className="headerLink cursor-pointer font-semibold text-white hover:text-white">
-              Home
-            </li>
+            <Link href='/'>
+              <li className="headerLink cursor-pointer font-semibold text-white hover:text-white">
+                Home
+              </li>            
+            </Link>
 
             <li className="headerLink">TV Shows</li>
             <li className="headerLink">Movies</li>

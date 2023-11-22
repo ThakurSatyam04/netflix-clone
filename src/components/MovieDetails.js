@@ -24,14 +24,14 @@ const MovieDetails = ({ movie, showPlayer, setShowPlayer, trailerURL }) => {
             />
           </div>
 
-          <h1 className="text-2xl font-bold md:text-4xl lg:text-7xl">
+          <h1 className="text-2xl font-bold md:text-4xl lg:text-7xl ml-6">
             {movie?.title || movie?.name || movie?.original_name}
           </h1>
-          <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
+          <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl ml-6">
             {movie?.overview}
           </p>
 
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 ml-6">
             <button
               className="bannerButton bg-white text-black"
               onClick={() => {
